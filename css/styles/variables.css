@@ -1,0 +1,49 @@
+:root {
+  /* Цвета */
+  --primary-color: #FFFFFF;
+  --secondary-color: #121212;
+  --accent-color: #0760C5;
+
+  /* Типографика */
+  --main-font: Inter, Arial, sans-serif;
+  --accent-font: Montserrat, Arial, sans-serif;
+  --font-h1: 54px;
+  --font-h2: 48px;
+  --font-h3: 42px;
+  --font-h4: 24px;
+  --font-text: 18px;
+  --font-text-medium: 28px;
+  --font-text-large: 32px;
+
+  --line-height: 1.5;
+
+  --btn-font-size: 24px;
+
+  /* Размеры и отступы */
+  --container-padding-block: clamp(24px, 4vw, 60px);
+  --container-padding-inline: clamp(32px, 5vw, 100px);
+
+  --btn-padding: 14px 32px;
+
+  /* Бордеры и радиусы */
+  --btn-radius: 8px;
+
+  /* Анимации */
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+  :root {
+  --font-h1: 26px;
+  --font-h2: 24px;
+  --font-h3: 22px;
+  --font-h4: 18px;
+  --font-text: 16px;
+  --font-text-medium: 18px;
+  --font-text-large: 20px;
+
+  --btn-font-size: 18px;
+
+  --container-padding-block: 32px;
+  --container-padding-inline: 24px;
+  }
+}

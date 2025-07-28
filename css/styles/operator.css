@@ -1,0 +1,188 @@
+/* Стили Operator */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url(../../assets/images/hero.jpg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(5px) brightness(50%);
+}
+
+.hero__container {
+  position: relative;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.arrow-link {
+  position: absolute;
+  bottom: clamp(32px, 5vw, 100px);
+  left: 50%;
+  z-index: 10;
+  transform: translateX(-50%);
+  animation: arrow-bounce 2s infinite ease-in-out;
+}
+
+.operator-benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px 40px;
+}
+.operator-benefits__grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.operator-benefits__btn {
+  align-self: center;
+}
+
+.operator-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(280px, 1fr));
+  justify-content: center;
+  gap: 32px;
+}
+
+.operator-services__grid-item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* растягивается по колонке */
+  max-width: 360px; /* ограничим максимальную ширину */
+  margin: 0 auto; /* центрирует */
+  border-radius: 32px;
+  overflow: hidden;
+  color: var(--primary-color);
+  background-color: var(--accent-color);
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  aspect-ratio: 4 / 5;
+}
+
+.operator-services__grid-item::after {
+  content: '';
+  background-image: url(../../assets/svg/question-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 48px;
+  height: 48px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  z-index: 10;
+}
+
+.operator-services__grid-item:hover::after{
+  background-image: url(../../assets/svg/answer-circle.svg);
+}
+
+/* Обёртка контента */
+.operator-services__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 24px;
+}
+
+/* Заголовок */
+.operator-services__title {
+  z-index: 3;
+  font-family: var(--accent-font);
+  font-weight: 700;
+  font-size: clamp(18px, 2.5vw + 1rem, 30px);
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+/* Скрытое описание */
+.operator-services__desc {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  left: 24px;
+  z-index: 3;
+  opacity: 0;
+  color: var(--primary-color);
+  font-size: clamp(18px, 1.2vw, 24px);
+  line-height: 1.4;
+  text-align: center;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+  font-family: var(--main-font);
+}
+
+/* Затемнение при ховере */
+.operator-services__grid-item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: opacity 0.3s ease;
+}
+
+/* Показываем описание при ховере */
+.operator-services__grid-item:hover::before {
+  opacity: 1;
+}
+
+.operator-services__grid-item:hover .operator-services__desc {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.operator-services__grid-item:hover .operator-services__title {
+  opacity: 0.2;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .operator-benefits__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .operator-services__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .operator-services__grid {
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+  }
+}
+
+
+
+
+
+
+
+
+

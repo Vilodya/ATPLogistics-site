@@ -1,0 +1,160 @@
+/* Стили dewlivery */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url(../../assets/images/hero.jpg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(50%);
+  z-index: 0;
+}
+
+.hero__container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.hero__image {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.arrow-link {
+  position: absolute;
+  animation: arrow-bounce 2s infinite ease-in-out;
+  bottom: clamp(32px, 5vw, 100px);
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading__list {
+  display: grid;
+  margin-top: 40px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.loading-card {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.loading-card__icon {
+  display: flex;
+  flex-shrink: 0;
+  width: 68px;
+  height: 68px;
+}
+
+.loading-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.loading-card__title {
+  font-size: var(--font-text-medium);
+  font-family: var(--accent-font);
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.customs-clearance {
+  text-align: center;
+}
+
+.customs-clearance_btn {
+  margin-top: 40px;
+}
+
+.delivery__slider-wrapper {
+  align-self: center;
+  max-width: 100%;
+  margin-top: 32px;
+}
+
+.swiper {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-box {
+  width: 100%;
+  /* aspect-ratio: 16 / 9; Включить после нормальных картинок*/
+  overflow: hidden;
+  position: relative;
+  border-radius: 8px;
+}
+
+.slide-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--primary-color);
+}
+
+.swiper-button-prev::after {
+  animation: arrow-bounce-left 2s infinite ease-in-out;
+}
+
+.swiper-button-next {
+  animation: arrow-bounce-right 2s infinite ease-in-out;
+}
+
+/* Ограничение ширины изображения */
+.delivery__image {
+  display: block;
+  width: 100%;
+  max-width: 333px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 36px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .loading__list {
+    margin-top: 32px;
+    grid-template-columns: 1fr;
+  }
+
+  .loading-card {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .loading-card__icon {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
+
