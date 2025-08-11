@@ -100,12 +100,6 @@
   aspect-ratio: 4 / 5;
 }
 
-
-
-.operator-services__grid-item:hover::after{
-  background-image: url(../../assets/svg/answer-circle.svg);
-}
-
 /* Обёртка контента */
 .operator-services__content {
   position: relative;
@@ -270,7 +264,7 @@
   z-index: 10;
   width: 24px;
   height: 24px;
-  background-image: url(../../assets/svg/question-circle.svg);
+  background-image: url(../../assets/svg/question-circle-black.svg);
   background-repeat: no-repeat;
   background-position: center;
 }

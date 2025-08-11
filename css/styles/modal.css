@@ -34,8 +34,9 @@
 .modal__content {
   width: 100%;
   max-width: 500px;
-  border-radius: 32px;
+  border-radius: 16px;
   padding: 60px 32px;
+  border: 2px solid var(--accent-color);
   text-align: center;
   background-color: var(--primary-color);
   position: relative;
