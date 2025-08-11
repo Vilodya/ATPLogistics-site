@@ -78,7 +78,7 @@
 .modal__content {
   width: 100%;
   max-width: 360px;
-  border-radius: 32px;
+  border-radius: 16px;
   padding: 48px 24px;
   text-align: center;
   background-color: var(--primary-color);
