@@ -80,7 +80,7 @@
 }
 
 .btn:hover {
-  scale: 1.2;
+  scale: 1.1;
 }
 
 .btn--light {
@@ -260,7 +260,7 @@
   font-size: var(--font-h1);
 }
 .hero__text {
-  margin-top: 40px;
+  margin-top: 16px;
   font-size: var(--font-text-large);
 }
 
@@ -285,8 +285,8 @@
 .benefit-card__icon {
   display: flex;
   flex-shrink: 0;
-  width: 68px;
-  height: 68px;
+  width: 60px;
+  height: 60px;
 }
 
 .benefit-card__image {
@@ -362,6 +362,9 @@
   gap: 32px;
   padding-inline: clamp(32px, 5vw, 100px);
   padding-block: clamp(24px, 4vw, 48px);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .footer__logos {
@@ -388,7 +391,7 @@
   gap: 16px;
 }
 
-.footer__bottom {
+.footer__wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -396,6 +399,8 @@
   padding-inline: clamp(32px, 5vw, 100px);
   padding-block: 24px;
   font-size: 14px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .footer__policy {
@@ -487,7 +492,7 @@
     margin-top: 16px;
   }
 
-  .footer__bottom {
+  .footer__wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;

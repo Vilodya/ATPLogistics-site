@@ -40,18 +40,41 @@
 
 .operator-benefits__grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 32px 40px;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 24px 32px;
 }
 .operator-benefits__grid-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 24px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.operator-benefits__grid-item:hover .operator-benefits__image {
+    position: relative;
+    filter: brightness(0.2) blur(1px);
+    cursor: pointer;
+    scale: 1.1;
+}
+
+.operator-benefits__image {
+    transition: filter 0.3s ease, scale 0.3s ease;
 }
 
 .operator-benefits__btn {
+  position: absolute;
+  bottom: -32px;
   align-self: center;
+  opacity: 0;
 }
+
+.operator-benefits__grid-item:hover .operator-benefits__btn {
+  bottom: 32px;
+  opacity: 1;
+}
+
 
 .operator-services__grid {
   display: grid;
@@ -68,7 +91,7 @@
   width: 100%; /* растягивается по колонке */
   max-width: 360px; /* ограничим максимальную ширину */
   margin: 0 auto; /* центрирует */
-  border-radius: 32px;
+  border-radius: 16px;
   overflow: hidden;
   color: var(--primary-color);
   background-color: var(--accent-color);
@@ -77,18 +100,7 @@
   aspect-ratio: 4 / 5;
 }
 
-.operator-services__grid-item::after {
-  content: '';
-  background-image: url(../../assets/svg/question-circle.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 48px;
-  height: 48px;
-  position: absolute;
-  right: 24px;
-  top: 24px;
-  z-index: 10;
-}
+
 
 .operator-services__grid-item:hover::after{
   background-image: url(../../assets/svg/answer-circle.svg);
@@ -126,12 +138,12 @@
   z-index: 3;
   opacity: 0;
   color: var(--primary-color);
+  font-family: var(--main-font);
   font-size: clamp(18px, 1.2vw, 24px);
   line-height: 1.4;
   text-align: center;
   transition: opacity 0.3s ease, transform 0.3s ease;
   transform: translateY(10px);
-  font-family: var(--main-font);
 }
 
 /* Затемнение при ховере */
@@ -160,21 +172,154 @@
   opacity: 0.2;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+.operator__slider-wrapper {
+  align-self: center;
+  max-width: 100%;
+  margin-top: 32px;
+}
+
+.swiper {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-box {
+  width: 100%;
+  /* aspect-ratio: 16 / 9; Включить после нормальных картинок*/
+  overflow: hidden;
+  position: relative;
+  padding: 10px 0;
+  background-color: var(--primary-color);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--accent-color);
+}
+
+.swiper-button-prev::after {
+  animation: arrow-bounce-left 2s infinite ease-in-out;
+}
+
+.swiper-button-next {
+  animation: arrow-bounce-right 2s infinite ease-in-out;
+}
+
+.card {
+  background-color: transparent;
+  max-width: 300px;
+  aspect-ratio: 3/2;
+  perspective: 1000px; /* добавляет эффект 3D */
+  border-radius: 16px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+
+/* Наведение */
+.card:hover .card-inner,
+.card.flipped .card-inner {
+  transform: rotateY(-180deg);
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+/* Стороны карточки */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Montserrat, sans-serif;
+  border: 2px solid var(--accent-color);
+}
+
+/* Передняя сторона */
+.card-front {
+  overflow: hidden;
+}
+
+.card-front::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  z-index: 10;
+  width: 24px;
+  height: 24px;
+  background-image: url(../../assets/svg/question-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Задняя сторона */
+.card-back {
+  transform: rotateY(-180deg);
+  flex-direction: column;
+  /*gap: 24px; Возможно потом стоит вернуть*/ 
+  text-align: center;
+  padding: 24px;
+}
+
+.card__title {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+  color: var(--secondary-color);
+}
+
+.card__text {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+@media (min-width: 320px) and (max-width: 499px) {
   .operator-benefits__grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 24px;
   }
+}
 
+@media (min-width: 320px) and (max-width: 767px) {
   .operator-services__grid {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 }
 
+@media (min-width: 500px) and (max-width: 1100px) {
+  .operator-benefits__grid {
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 992px) {
   .operator-services__grid {
-    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
   }
 }
 

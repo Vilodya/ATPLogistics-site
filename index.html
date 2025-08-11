@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="./assets/fonts/fonts.css">
   <link rel="stylesheet" href="./css/styles/global.css">
   <link rel="stylesheet" href="./css/styles/variables.css">
+  <link rel="stylesheet" href="animations.css">
   <link rel="stylesheet" href="./css/styles/style.css">
 
 </head>
@@ -31,9 +32,6 @@
   <header class="header">
     <div class="header__container">
       <div class="header__logos">
-          <a href="./index.html">
-            <img class="header__logo" src="./assets/images/logo-atp.png" alt="ATP Logistics">
-          </a>
           <a href="https://atpgroup.kz/" target="_blank">
             <img class="header__logo" src="./assets/images/logo-atp-group.png" alt="ATP Group">
           </a>
@@ -41,7 +39,7 @@
 
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__item"><a href="#" class="nav__link">О компании</a></li>
+          <li class="nav__item"><a href="./index.html" class="nav__link">Главная</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Новости</a></li>
           <li class="nav__item"><a href="./pages/delivery.html" class="nav__link">Услуги</a></li>
           <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
@@ -67,7 +65,7 @@
   <div class="mobile-menu">
     <button type="button" class="mobile-menu__close" aria-label="Закрыть меню">×</button>
     <ul class="mobile-menu__list">
-      <li><a href="#">О компании</a></li>
+      <li><a href="./index.html">Главная</a></li>
       <li><a href="#">Новости</a></li>
       <li><a href="./pages/delivery.html">Услуги</a></li>
       <li><a href="#contacts">Контакты</a></li>
@@ -82,74 +80,74 @@
     </div>
   </section>
   <!-- Service -->
-  <section class="section section--accent service">
+  <section class="section service">
     <div class="container service__container">
       <h2 class="section__title service__title">ATP Logistics предоставляет комплексную услугу по доставке грузов.</h2>
       <div class="card-grid card-grid--6">
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/truck-white.svg" alt="Грузовой транспорт">
+            <img class="benefit-card__image" src="./assets/svg/truck.svg" alt="Грузовой транспорт">
           </div>
           <div class="benefit-card__title">Погрузка груза на&nbsp;стороне продавца</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/stamp-white.svg" alt="Таможенные услуги">
+            <img class="benefit-card__image" src="./assets/svg/Stamp.svg" alt="Таможенные услуги">
           </div>
           <div class="benefit-card__title">Обеспечение прохождения таможенной границы</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/geo.svg" alt="Оплата">
+            <img class="benefit-card__image" src="./assets/svg/geo-blue.svg" alt="Оплата">
           </div>
           <div class="benefit-card__title">Доставка груза до покупателя</div>
         </div>
       </div>
-      <a href="./pages/delivery.html" class="btn btn--light keypartner__btn">Подробнее</a>
+      <a href="./pages/delivery.html" class="btn btn--primary  keypartner__btn">Подробнее</a>
     </div>
   </section>
   <!-- Mapblock -->
-  <section class="section mapblock">
+  <!-- <section class="section mapblock">
     <div class="container mapblock__container">
       <img class="mapblock__image" src="./assets/images/map.jpg" alt="Map">
     </div>
-  </section>
+  </section> -->
   <!-- Our Benefits -->
   <section class="section our-benefits">
     <div class="container our-benefits__container">
       <h2 class="section__title our-benefits__title">Наши преимущества</h2>
       <div class="card-grid card-grid--6">
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/truck.svg" alt="Грузовой транспорт">
           </div>
           <div class="benefit-card__title">Собственный парк грузового транспорта</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/Stamp.svg" alt="Таможенные услуги">
           </div>
           <div class="benefit-card__title">Услуги по таможенному оформлению без посредников</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/wallet.svg" alt="Оплата">
           </div>
           <div class="benefit-card__title">Удобные способы оплаты: наличный и&nbsp;безналичный расчет</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/pig.svg" alt="Тарифы">
           </div>
           <div class="benefit-card__title">Умеренные тарифы</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/like.svg" alt="Клиенты">
           </div>
           <div class="benefit-card__title">Индивидуальный подход к&nbsp;каждому клиенту</div>
         </div>
-        <div class="benefit-card">
+        <div class="benefit-card animate-on-scroll fade-in">
           <div class="benefit-card__icon">
             <img class="benefit-card__image" src="./assets/svg/compass.svg" alt="Доставка">
           </div>
@@ -254,14 +252,16 @@
         </div>
       </div>
       <div class="footer__bottom section--accent">
-        <div class="footer__copyright">
-          © 2025 atp-logistics.kz Все права защищены.
-        </div>
-        <a href="#" class="footer__policy">Политика конфиденциальности</a>
-        <div class="lang-switcher footer__lang-switcher">
-          <img src="./assets/svg/globe.svg" alt="Язык" class="icon">
-          <span>RU</span>
-          <img src="./assets/svg/chevron-down.svg" alt="Открыть" class="icon icon--small">
+        <div class="footer__wrapper">
+          <div class="footer__copyright">
+            © 2025 atp-logistics.kz Все права защищены.
+          </div>
+          <a href="#" class="footer__policy">Политика конфиденциальности</a>
+          <div class="lang-switcher footer__lang-switcher">
+            <img src="./assets/svg/globe.svg" alt="Язык" class="icon">
+            <span>RU</span>
+            <img src="./assets/svg/chevron-down.svg" alt="Открыть" class="icon icon--small">
+          </div>
         </div>
       </div>
     </div>
@@ -270,5 +270,6 @@
   <script src="./scripts/swiper-bundle.min.js"></script>
   <script src="./scripts/main.js" defer></script>
   <script src="./scripts/sliders.js" defer></script>
+    <script src="./scripts/animations.js" defer></script>
 </body>
 </html>

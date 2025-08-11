@@ -1,0 +1,77 @@
+/* Скрытое состояние перед анимацией */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Когда элемент в зоне видимости */
+.animate-on-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==== Появление (fade-in) ==== */
+.fade-in {
+  animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ==== Появление с подъёмом (slide-up) ==== */
+.slide-up {
+  animation: slideUp 0.8s ease-out forwards;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== Появление с увеличением (zoom-in) ==== */
+.zoom-in {
+  animation: zoomIn 0.6s ease-out forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==== Появление слева (slide-left) ==== */
+.slide-left {
+  animation: slideLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ==== Задержки появления ==== */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+.delay-5 { animation-delay: 1s; }

@@ -7,17 +7,17 @@
   /* Типографика */
   --main-font: Inter, Arial, sans-serif;
   --accent-font: Montserrat, Arial, sans-serif;
-  --font-h1: 54px;
-  --font-h2: 48px;
-  --font-h3: 42px;
+  --font-h1: 48px;
+  --font-h2: 42px;
+  --font-h3: 36px;
   --font-h4: 24px;
   --font-text: 18px;
-  --font-text-medium: 28px;
-  --font-text-large: 32px;
+  --font-text-medium: 20px;
+  --font-text-large: 24px;
 
   --line-height: 1.5;
 
-  --btn-font-size: 24px;
+  --btn-font-size: 18px;
 
   /* Размеры и отступы */
   --container-padding-block: clamp(24px, 4vw, 60px);

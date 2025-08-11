@@ -46,3 +46,4 @@ const partnersSwiper = new Swiper('.partners__slider-wrapper.swiper', {
       }
     }
   });
+
