@@ -75,7 +75,6 @@
   opacity: 1;
 }
 
-
 .operator-services__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(280px, 1fr));
@@ -215,6 +214,7 @@
   aspect-ratio: 3/2;
   perspective: 1000px; /* добавляет эффект 3D */
   border-radius: 16px;
+  padding: 15px 0;
 }
 
 .card-inner {
