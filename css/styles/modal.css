@@ -96,4 +96,9 @@
     font-size: 18px;
     font-family: var(--main-font);
   }
+
+  .modal__close {
+    top: 10px;
+    right: 10px;
+  }
 }

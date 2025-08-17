@@ -188,11 +188,9 @@
 
 .slide-box {
   width: 100%;
-  /* aspect-ratio: 16 / 9; Включить после нормальных картинок*/
-  overflow: hidden;
   position: relative;
-  padding: 10px 0;
   background-color: var(--primary-color);
+  padding: 15px 0;
 }
 
 .swiper-button-next,
@@ -212,9 +210,15 @@
   background-color: transparent;
   max-width: 300px;
   aspect-ratio: 3/2;
-  perspective: 1000px; /* добавляет эффект 3D */
+  perspective: 1000px;
   border-radius: 16px;
-  padding: 15px 0;
+  display: flex;
+}
+
+.card,
+.card-inner {
+  -webkit-transform: translateZ(0); /* фикс рендера в iOS */
+  backface-visibility: hidden;
 }
 
 .card-inner {
@@ -249,6 +253,7 @@
   align-items: center;
   font-family: Montserrat, sans-serif;
   border: 2px solid var(--accent-color);
+  padding: 15px;
 }
 
 /* Передняя сторона */
@@ -276,6 +281,7 @@
   /*gap: 24px; Возможно потом стоит вернуть*/ 
   text-align: center;
   padding: 24px;
+  background-color: var(--primary-color);
 }
 
 .card__title {
