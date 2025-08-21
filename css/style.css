@@ -231,7 +231,7 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background-image: url(../../assets/images/hero.jpg);
+  background-image: url(../assets/images/hero.jpg);
   background-position: center;
   background-size: cover;
   filter: blur(2px) brightness(20%);
@@ -239,7 +239,7 @@
 
 .hero__container {
   position: relative;
-  background-image: url(../../assets/images/hero.jpg);
+  background-image: url(../assets/images/hero.jpg);
   background-position: left center;
 }
 
