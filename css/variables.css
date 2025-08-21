@@ -33,7 +33,7 @@
 
 @media (min-width: 320px) and (max-width: 768px) {
   :root {
-  --font-h1: 26px;
+  --font-h1: 32px;
   --font-h2: 24px;
   --font-h3: 22px;
   --font-h4: 18px;

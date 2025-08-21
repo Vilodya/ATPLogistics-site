@@ -27,10 +27,10 @@
   <link rel="stylesheet" href="./css/style.css">
 
 </head>
-<body class="page">
+<body class="page home">
   <!-- header -->
-  <header class="header">
-    <div class="header__container">
+  <header class="header" >
+    <div class="main-header__container" id="header">
       <div class="header__logos">
           <a href="https://atpgroup.kz/" target="_blank">
             <img class="header__logo" src="./assets/images/logo-atp-group.png" alt="ATP Group">
@@ -48,15 +48,15 @@
 
       <div class="header__controls">
         <div class="lang-switcher">
-          <img src="./assets/svg/globe-black.svg" alt="Язык" class="icon">
+          <img src="./assets/svg/globe-black.svg" alt="Язык" class="icon" id="icon-globe">
           <span>RU</span>
-          <img src="./assets/svg/chevron-down-black.svg" alt="Открыть" class="icon icon--small">
+          <img src="./assets/svg/chevron-down-black.svg" alt="Открыть" class="icon icon--small" id="icon-chevron">
         </div>
         <a href="tel:+77717094514" class="phone-icon">
-          <img src="./assets/svg/phone.svg" alt="Позвонить" class="icon">
+          <img src="./assets/svg/phone-black.svg" alt="Позвонить" class="icon" id="icon-phone">
         </a>
          <button type="button" class="toggle">
-          <img src="./assets/svg/burger.svg" alt="burger-menu" class="nav__burger icon">
+          <img src="./assets/svg/burger-black.svg" alt="burger-menu" class="nav__burger icon" id="icon-burger">
         </button>
       </div>
     </div>
@@ -72,15 +72,22 @@
     </ul>
   </div>
   <!-- Hero -->
-  <section class="section section--accent hero">
-    <div class="container hero__container">
-      <h1 class="hero__title">ATP Logistics является одним из&nbsp;лидеров транспортно-логистической отрасли на&nbsp;рынке Казахстана.</h1>
-      <p class="hero__text">входит в группу компаний<br><strong>ATP Group Kazakhstan</strong></p>
-      <a href="https://atpgroup.kz/" target="_blank" class="btn btn--primary hero__btn">Подробнее</a>
+  <section class="section section--accent main-hero">
+    <div class="container main-hero__container">
+      <div class="main-hero__content">
+        <h1 class="main-hero__title">ATP&nbsp;Logistics является одним из&nbsp;лидеров транспортно-логистической отрасли на&nbsp;рынке Казахстана.</h1>
+        <p class="main-hero__text">входит в группу компаний<br><strong>ATP Group Kazakhstan</strong></p>
+        <a href="https://atpgroup.kz/" target="_blank" class="btn btn--primary main-hero__btn">Подробнее</a>
+      </div>
     </div>
+      <a class="arrow-link" href="#service">
+        <div class="arrow">
+          <svg role="presentation" class="arrow-svg" style="fill:#ffffff;" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
+        </div>
+      </a>
   </section>
   <!-- Service -->
-  <section class="section service">
+  <section class="section service" id="service">
     <div class="container service__container">
       <h2 class="section__title service__title">ATP Logistics предоставляет комплексную услугу по&nbsp;доставке грузов.</h2>
       <div class="grid">

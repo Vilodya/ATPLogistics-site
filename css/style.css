@@ -113,6 +113,29 @@
   background-color: var(--primary-color);
 }
 
+.main-header__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 16px 0;
+  padding-inline: var(--container-padding-inline);
+  color: var(--primary-color);
+  background-color: transparent;
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.main-header__container.scrolled {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
 .header__logos {
   display: flex;
   align-items: center;
@@ -168,6 +191,10 @@
   cursor: pointer;
 }
 
+.toggle {
+  background-color: transparent;
+}
+
 .icon {
   width: 32px;
   height: 32px;
@@ -221,12 +248,64 @@
 }
 
 /* Стили секций */
-.hero {
+.main-hero {
   position: relative;
+  height: 100vh; /* на весь экран */
   overflow: hidden;
 }
 
-.hero::before {
+.main-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image: url(../assets/svg/bg.svg);
+  background-position: center;
+  background-size: cover;
+  filter: blur(2px) brightness(20%);
+}
+
+.main-hero__container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* на весь экран */
+  /* background-image: url(../assets/images/hero.jpg); */
+  background-position: left center;
+}
+
+/* .main-hero__container::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
+
+.main-hero__container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.main-hero__title {
+  font-size: var(--font-h1);
+}
+.main-hero__text {
+  margin-top: 24px;
+  font-size: var(--font-text-large);
+}
+
+.main-hero__btn {
+  margin-top: 48px;
+}
+
+/* .hero {
+  position: relative;
+  overflow: hidden;
+} */
+
+/* .hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -241,7 +320,7 @@
   position: relative;
   background-image: url(../assets/images/hero.jpg);
   background-position: left center;
-}
+} */
 
 .hero__container::after {
   content: '';
@@ -266,6 +345,10 @@
 
 .hero__btn {
   margin-top: 48px;
+}
+
+.service {
+  scroll-margin-top: 100px;
 }
 
 .grid {
@@ -302,9 +385,9 @@
 }
 
 .grid__card-btn {
-  margin-top: 40px;
-  align-self: center;
   display: inline-block;
+  align-self: center;
+  margin-top: 40px;
 }
 
 .divider__container {
@@ -426,8 +509,8 @@
 .footer__logos {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   align-items: center;
+  gap: 24px;
 }
 
 .footer__title {
@@ -521,7 +604,7 @@
     margin-top: 32px;
   }
 
-    .grid {
+  .grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 32px;
