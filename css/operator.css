@@ -209,7 +209,7 @@
 .card {
   background-color: transparent;
   max-width: 300px;
-  aspect-ratio: 3/2;
+  height: 200px;
   perspective: 1000px;
   border-radius: 16px;
   display: flex;

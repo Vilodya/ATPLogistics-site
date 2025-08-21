@@ -19,12 +19,12 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="http://localhost/">
 
-  <link rel="stylesheet" href="./css/styles/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
   <link rel="stylesheet" href="./assets/fonts/fonts.css">
-  <link rel="stylesheet" href="./css/styles/global.css">
-  <link rel="stylesheet" href="./css/styles/variables.css">
-  <link rel="stylesheet" href="animations.css">
-  <link rel="stylesheet" href="./css/styles/style.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/variables.css">
+  <link rel="stylesheet" href="./css/animations.css">
+  <link rel="stylesheet" href="./css/style.css">
 
 </head>
 <body class="page">
@@ -82,36 +82,43 @@
   <!-- Service -->
   <section class="section service">
     <div class="container service__container">
-      <h2 class="section__title service__title">ATP Logistics предоставляет комплексную услугу по доставке грузов.</h2>
-      <div class="card-grid card-grid--6">
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/truck.svg" alt="Грузовой транспорт">
+      <h2 class="section__title service__title">ATP Logistics предоставляет комплексную услугу по&nbsp;доставке грузов.</h2>
+      <div class="grid">
+        <div class="grid__card animate-on-scroll fade-in">
+          <div class="grid__card-content">
+            <div class="grid__card-icon">
+              <img class="grid__card-image" src="./assets/svg/truck.svg" alt="Грузовой транспорт">
+            </div>
+            <div class="grid__card-text">Погрузка груза на&nbsp;стороне продавца</div>
           </div>
-          <div class="benefit-card__title">Погрузка груза на&nbsp;стороне продавца</div>
+          <a href="./pages/delivery.html#loading" class="btn btn--primary grid__card-btn">Подробнее</a>
         </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/Stamp.svg" alt="Таможенные услуги">
+        <div class="grid__card animate-on-scroll fade-in">
+          <div class="grid__card-content">
+            <div class="grid__card-icon">
+              <img class="grid__card-image" src="./assets/svg/Stamp.svg" alt="Таможенные услуги">
+            </div>
+            <div class="grid__card-text">Обеспечение прохождения таможенной границы</div>
           </div>
-          <div class="benefit-card__title">Обеспечение прохождения таможенной границы</div>
+          <a href="./pages/delivery.html#customs-clearance" class="btn btn--primary grid__card-btn">Подробнее</a>
         </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/geo-blue.svg" alt="Оплата">
+        <div class="grid__card animate-on-scroll fade-in">
+          <div class="grid__card-content">
+            <div class="grid__card-icon">
+              <img class="grid__card-image" src="./assets/svg/geo-blue.svg" alt="Оплата">
+            </div>
+            <div class="grid__card-text">Доставка груза до покупателя</div>
           </div>
-          <div class="benefit-card__title">Доставка груза до покупателя</div>
+          <a href="./pages/delivery.html#delivery" class="btn btn--primary grid__card-btn">Подробнее</a>
         </div>
       </div>
-      <a href="./pages/delivery.html" class="btn btn--primary  keypartner__btn">Подробнее</a>
     </div>
   </section>
-  <!-- Mapblock -->
-  <!-- <section class="section mapblock">
-    <div class="container mapblock__container">
-      <img class="mapblock__image" src="./assets/images/map.jpg" alt="Map">
+  <section class="section divider">
+    <div class="divider__container">
+      <div class="divider"></div>
     </div>
-  </section> -->
+  </section>
   <!-- Our Benefits -->
   <section class="section our-benefits">
     <div class="container our-benefits__container">
@@ -157,7 +164,7 @@
     </div>
   </section>
   <!-- Key Partner -->
-  <section class="section section--accent keypartner">
+  <section class="section keypartner">
     <div class="container keypartner__container">
       <h2 class="section__title keypartner__title">Ключевым партнером ATP Logistics является компания EuroTransit, которая имеет всю инфраструктуру на&nbsp;границе Казахстана с&nbsp;КНР:</h2>
       <ul class="keypartner__list">
@@ -169,7 +176,7 @@
         <li class="keypartner__list-item">Транспортно-логистический центр класса «А» в&nbsp;г.&nbsp;Алматы.</li>
         <li class="keypartner__list-item">Коммунально-складские помещения в&nbsp;г.&nbsp;Астана и&nbsp;г.&nbsp;Шымкент.</li>
     </ul>
-    <a href="https://eurotransit.kz/" target="_blank" class="btn btn--light keypartner__btn">Подробнее</a>
+    <a href="https://eurotransit.kz/" target="_blank" class="btn btn--primary keypartner__btn">Подробнее</a>
     </div>
   </section>
   <!--Partners -->
@@ -218,10 +225,10 @@
       <div class="footer__top">
         <div class="footer__logos">
           <a href="./index.html">
-            <img src="./assets/images/logo-atp.png" alt="ATP Logistics">
+            <img class="footer__logo" src="./assets/images/logo-atp.png" alt="ATP Logistics">
           </a>
           <a href="https://atpgroup.kz/" target="_blank">
-            <img src="./assets/images/logo-atp-group.png" alt="ATP Group">
+            <img class="footer__logo" src="./assets/images/logo-atp-group.png" alt="ATP Group">
           </a>
         </div>
         <nav class="footer__nav">
