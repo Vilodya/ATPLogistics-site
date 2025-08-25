@@ -7,7 +7,7 @@
   /* Типографика */
   --main-font: Inter, Arial, sans-serif;
   --accent-font: Montserrat, Arial, sans-serif;
-  --font-h1: 48px;
+  --font-h1: 68px;
   --font-h2: 42px;
   --font-h3: 36px;
   --font-h4: 24px;
@@ -31,7 +31,7 @@
   /* Анимации */
 }
 
-@media (min-width: 320px) and (max-width: 768px) {
+@media (min-width: 320px) and (max-width: 767px) {
   :root {
   --font-h1: 32px;
   --font-h2: 24px;
