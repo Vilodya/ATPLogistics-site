@@ -1,0 +1,14 @@
+<div class="lang-switcher">
+  <div class="lang-switcher__current">
+    <img src="<?=SITE_TEMPLATE_PATH?>/assets/svg/globe-black.svg" alt="Язык" class="icon">
+    <span>RU</span>
+    <img src="<?=SITE_TEMPLATE_PATH?>/assets/svg/chevron-down-black.svg" alt="Открыть" class="icon icon--small">
+  </div>
+
+  <div class="langs-menu-top">
+    <ul class="langs-drop-down-top">
+      <li><a href="/kz<?=str_replace('/en/','/',$APPLICATION->GetCurPage())?>">ҚАЗ</a></li>
+      <li><a href="/en<?=str_replace('/en/','/',$APPLICATION->GetCurPage())?>">ENG</a></li>
+    </ul>
+  </div>
+</div>
