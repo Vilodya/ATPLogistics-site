@@ -86,3 +86,10 @@
   opacity: 1;
   color: #efefef;
 }
+
+#truck1,
+#truck2 {
+  opacity: 0;
+  transform-box: fill-box;
+  transform-origin: center;
+}
