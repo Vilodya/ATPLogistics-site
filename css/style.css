@@ -248,13 +248,24 @@
 }
 
 /* Стили секций */
+.background {
+  position: fixed;
+  z-index: -1;
+  inset: 0;
+  background-image: url(../assets/images/bg.png);
+  background-size: cover;
+  filter: brightness(30%);
+  background-position: left center;
+}
+
 .main-hero {
   position: relative;
   height: 100vh; /* на весь экран */
   overflow: hidden;
+  background-color: transparent;
 }
 
-.main-hero::before {
+/* .main-hero::before {
   content: '';
   position: absolute;
   inset: 0;
@@ -263,7 +274,7 @@
   background-position: center;
   background-size: cover;
   filter: brightness(30%);
-}
+} */
 
 .main-hero__container {
   position: relative;
@@ -274,14 +285,6 @@
   background-position: left center;
 }
 
-/* .main-hero__container::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: rgba(0, 0, 0, 0.6);
-} */
-
 .main-hero__container > * {
   /* position: relative; */
   z-index: 2;
@@ -290,10 +293,6 @@
 .main-hero__title {
   font-size: var(--font-h1);
   margin-bottom: 38px;
-}
-.main-hero__text {
-  margin-top: 24px;
-  font-size: var(--font-text-large);
 }
 
 .main-hero__btn {
@@ -595,6 +594,10 @@
   .icon--small {
     width: 18px;
     height: 18px;
+  }
+
+  .background {
+    background-image: url(../assets/images/bg--mobile.png);
   }
 
   .main-hero::before {

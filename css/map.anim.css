@@ -1,0 +1,178 @@
+.map.in-view .map-content {
+  animation: mapZoomOut 1s ease-in-out forwards;
+  animation-delay: 4.5s;
+}
+
+/* Labels */
+.map.in-view #label-zimunai,
+.map.in-view #label-tacheng,
+.map.in-view #label-alashankou,
+.map.in-view #label-ili,
+.map.in-view #label-dulati,
+.map.in-view #label-maykapchagay,
+.map.in-view #label-bahty,
+.map.in-view #label-dostyk,
+.map.in-view #label-nur-joly,
+.map.in-view #label-kalgat,
+.map.in-view #label-kg,
+.map.in-view #label-uz,
+.map.in-view #label-ru,
+.map.in-view #label-br,
+.map.in-view #label-az,
+.map.in-view #label-eu,
+.map.in-view #label-tur,
+.map.in-view #label-taj {
+  animation: fadeIn .6s ease-out forwards;
+}
+
+.map.in-view #label-zimunai, .map.in-view #label-maykapchagay { animation-delay: 0.6s; }
+.map.in-view #label-tacheng, .map.in-view #label-bahty { animation-delay: 1.2s; }
+.map.in-view #label-alashankou, .map.in-view #label-dostyk { animation-delay: 1.8s; }
+.map.in-view #label-ili, .map.in-view #label-nur-joly { animation-delay: 2.4s; }
+.map.in-view #label-dulati, .map.in-view #label-kalgat { animation-delay: 3s; }
+
+.map.in-view #label-kg { animation-delay: 6s; }
+.map.in-view #label-uz { animation-delay: 7s; }
+.map.in-view #label-ru { animation-delay: 8s; }
+.map.in-view #label-br { animation-delay: 9s; }
+.map.in-view #label-az { animation-delay: 10s; }
+.map.in-view #label-eu { animation-delay: 11s; }
+.map.in-view #label-tur { animation-delay: 11s; }
+.map.in-view #label-taj { animation-delay: 11s; }
+
+/* Pins */
+.map.in-view #start-map-zimurai,
+.map.in-view #start-map-tacheng,
+.map.in-view #start-map-alashankou,
+.map.in-view #start-map-ili,
+.map.in-view #start-map-dulati,
+.map.in-view #end-map-br,
+.map.in-view #end-map-ru-1,
+.map.in-view #end-map-ru-2,
+.map.in-view #end-map-kaspi,
+.map.in-view #end-map-uz,
+.map.in-view #end-map-kg,
+.map.in-view #end-map-az {
+  animation: pinAppear .6s ease-out forwards;
+}
+
+.map.in-view #start-map-zimurai { animation-delay: 0.6s; }
+.map.in-view #start-map-tacheng { animation-delay: 1.2s; }
+.map.in-view #start-map-alashankou { animation-delay: 1.8s; }
+.map.in-view #start-map-ili { animation-delay: 2.4s; }
+.map.in-view #start-map-dulati { animation-delay: 3s; }
+
+.map.in-view #end-map-br { animation-delay: 9s; }
+.map.in-view #end-map-ru-1 { animation-delay: 8s; }
+.map.in-view #end-map-ru-2 { animation-delay: 8s; }
+.map.in-view #end-map-kaspi { animation-delay: 5s; }
+.map.in-view #end-map-uz { animation-delay: 7s; }
+.map.in-view #end-map-kg { animation-delay: 6s; }
+.map.in-view #end-map-az { animation-delay: 10s; }
+
+/* Routes */
+.map.in-view #route-ili-kyrgyzstan,
+.map.in-view #route-alashankou-uz,
+.map.in-view #route-zimunai-kaspi,
+.map.in-view #route-dulati-russia,
+.map.in-view #route-zimunai-russia,
+.map.in-view #route-tacheng-belarus,
+.map.in-view #route-kaspi-baku,
+.map.in-view #route-belarus-eu-1,
+.map.in-view #route-belarus-eu-2,
+.map.in-view #route-uz-turkmenistan,
+.map.in-view #route-uz-tajikistan
+ {
+  stroke-dasharray: 20 8;
+  stroke-dashoffset: 1000;
+  animation: draw 1s linear forwards;
+}
+
+.map.in-view #route-ili-kyrgyzstan { animation-delay: 6s; }
+.map.in-view #route-alashankou-uz { animation-delay: 7s; }
+.map.in-view #route-zimunai-kaspi { animation-delay: 5s; }
+.map.in-view #route-dulati-russia { animation-delay: 8s; }
+.map.in-view #route-zimunai-russia { animation-delay: 8s; }
+.map.in-view #route-tacheng-belarus { animation-delay: 9s; }
+.map.in-view #route-kaspi-baku { animation-delay: 10s; }
+.map.in-view #route-belarus-eu-1 { animation-delay: 11s; }
+.map.in-view #route-belarus-eu-2 { animation-delay: 11s; }
+.map.in-view #route-uz-turkmenistan { animation-delay: 11s; }
+.map.in-view #route-uz-tajikistan { animation-delay: 11s; }
+
+
+/* Countries */
+.map.in-view #country-kg { animation: toRed .6s ease-out forwards; animation-delay: 6s; }
+.map.in-view #country-uz { animation: toGreen .6s ease-out forwards; animation-delay: 7s; }
+.map.in-view #country-ru { animation: toBlue .6s ease-out forwards; animation-delay: 8s; }
+.map.in-view #country-br { animation: toGreen .6s ease-out forwards; animation-delay: 9s; }
+.map.in-view #country-az { animation: toGreen .6s ease-out forwards; animation-delay: 10s; }
+
+
+@keyframes mapZoomOut {
+  from {
+    transform: scale(1.6) translate(-220px, -10px);
+  }
+  to {
+    transform: scale(1) translate(0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pinAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.5) translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes toRed {
+  from {
+    opacity: 1;
+    color: #efefef;
+  }
+  to {
+    opacity: 0.3;
+    color: #ff0000;
+  }
+}
+
+@keyframes toBlue {
+  from {
+    opacity: 1;
+    color: #efefef;
+  }
+  to {
+    opacity: 0.2;
+    color: #0084ff;
+  }
+}
+
+@keyframes toGreen {
+  from {
+    opacity: 1;
+    color: #efefef;
+  }
+  to {
+    opacity: 0.2;
+    color: #00f4a7;
+  }
+}
+
+@keyframes draw {
+  0%   { stroke-dashoffset: 1; opacity: 0; }
+  10%  { opacity: 1; }        /* появление в самом начале */
+  100% { stroke-dashoffset: 0; opacity: 1; }
+}
