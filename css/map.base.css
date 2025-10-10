@@ -52,7 +52,9 @@
 #end-map-kaspi,
 #end-map-uz,
 #end-map-kg,
-#end-map-az {
+#end-map-az,
+#end-map-tur,
+#end-map-taj {
   opacity: 0;
   transform: scale(0.5) translateY(10px);
   transform-origin: center;
