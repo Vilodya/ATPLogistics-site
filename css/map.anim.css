@@ -109,7 +109,12 @@
 .map.in-view #country-az { animation: toGreen .6s ease-out forwards; animation-delay: 10s; }
 
 .map.in-view #truck1 { animation: truckMove1 4s ease-out forwards; animation-delay: 12s; }
-.map.in-view #truck2 { animation: truckMove2 4s ease-out forwards; animation-delay: 14s; }
+.map.in-view #truck2 {
+  /* дельты: от (0,0) в (-450px, -250px) */
+  --dx: -450px;
+  --dy: -250px;
+  animation: truckMove2 2s ease-out 14s forwards;
+}
 
 
 @keyframes mapZoomOut {
@@ -165,26 +170,11 @@
 }
 
 @keyframes truckMove2 {
-  0% {
-    transform: translate(1150px, 460px) scale(0.5);
-    opacity: 0;
-  }
-  10% {
-    transform: translate(1150px, 460px) scale(1.1);
-    opacity: 1;
-  }
-  20% {
-    transform: translate(1150px, 460px) scale(1);
-    opacity: 1;
-  }
-  80% {
-    transform: translate(700px, 210px) scale(1);
-    opacity: 1;
-  }
-  100% {
-    transform: translate(700px, 210px) scale(0.5);
-    opacity: 0;
-  }
+  0%   { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0; }
+  10%  { transform: translate3d(0, 0, 0) scale(1.1); opacity: 1; }
+  20%  { transform: translate3d(0, 0, 0) scale(1.0); opacity: 1; }
+  80%  { transform: translate3d(var(--dx), var(--dy), 0) scale(1);   opacity: 1; }
+  100% { transform: translate3d(var(--dx), var(--dy), 0) scale(0.5); opacity: 0; }
 }
 
 @keyframes toRed {

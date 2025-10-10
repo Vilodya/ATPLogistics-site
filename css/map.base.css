@@ -90,6 +90,9 @@
 #truck1,
 #truck2 {
   opacity: 0;
-  transform-box: fill-box;
+  transform-box: fill-box;           /* важно для SVG */
   transform-origin: center;
+  will-change: transform, opacity;
+  -webkit-backface-visibility: hidden;   /* iOS стабилизация */
+  -webkit-transform-style: preserve-3d;
 }
