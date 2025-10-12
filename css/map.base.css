@@ -1,19 +1,19 @@
 /* Общие стили */
 .map {
   overflow: hidden;
-}
-
-.map-svg {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .map-content {
-  transform-origin: center;
-  transform-box: fill-box;
-  transform: scale(1.6) translate(-220px, -10px);
+  width: 100%;
+  height: auto;
+  display: block;
+  transform-box: view-box;
+  transform-origin: 50% 50%;
+  transform: translate(-28%, -2%) scale(1.6);
+  will-change: transform;
 }
 
 /* Стили подписей */
@@ -86,7 +86,7 @@
 #country-az
  {
   opacity: 1;
-  color: #efefef;
+  fill: #efefef;
 }
 
 #truck1,
