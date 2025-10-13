@@ -115,12 +115,16 @@
 .map.in-view #country-tur { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 .map.in-view #country-taj { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 
-.map.in-view #truck1 { animation: truckMove1 4s ease-out forwards; animation-delay: 12s; }
+.map.in-view #truck1 {
+  --dx: -1030px;
+  --dy: -190px;
+  animation: truckMove 4s ease-in-out 12s infinite;
+}
+
 .map.in-view #truck2 {
-  /* дельты: от (0,0) в (-450px, -250px) */
   --dx: -450px;
   --dy: -250px;
-  animation: truckMove2 2s ease-out 14s forwards;
+  animation: truckMove 3s ease-in-out 14s infinite;
 }
 
 
@@ -151,34 +155,40 @@
   }
 }
 
-@keyframes truckMove1 {
+/* @keyframes truckMove1 {
   0% {
-    transform: translate(1190px, 350px) scale(0.5);
+    transform: scale(0.5);
     opacity: 0;
+    offset-distance: 0%;
   }
   10% {
-    transform: translate(1190px, 350px) scale(1.1);
+    transform: scale(1.1);
     opacity: 1;
+    offset-distance: 0%;
   }
   20% {
-    transform: translate(1190px, 350px) scale(1);
+    transform: scale(1);
     opacity: 1;
+    offset-distance: 0%;
   }
   80% {
-    transform: translate(169px, 170px) scale(1);
+    transform: scale(1);
     opacity: 1;
+    offset-distance: 100%;
   }
   100% {
-    transform: translate(169px, 170px) scale(0.5);
+    transform: scale(0.5);
     opacity: 0;
+    offset-distance: 100%;
   }
-}
+} */
 
-@keyframes truckMove2 {
+@keyframes truckMove {
   0%   { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0; }
   10%  { transform: translate3d(0, 0, 0) scale(1.1); opacity: 1; }
   20%  { transform: translate3d(0, 0, 0) scale(1.0); opacity: 1; }
-  80%  { transform: translate3d(var(--dx), var(--dy), 0) scale(1);   opacity: 1; }
+  80%  { transform: translate3d(var(--dx), var(--dy), 0) scale(1); opacity: 1; }
+  90%  { transform: translate3d(var(--dx), var(--dy), 0) scale(0.5); opacity: 0; }
   100% { transform: translate3d(var(--dx), var(--dy), 0) scale(0.5); opacity: 0; }
 }
 

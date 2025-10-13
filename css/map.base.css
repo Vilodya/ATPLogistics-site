@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .map-content {
@@ -92,9 +93,9 @@
 #truck1,
 #truck2 {
   opacity: 0;
-  transform-box: fill-box;           /* важно для SVG */
+  transform-box: fill-box;
   transform-origin: center;
   will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;   /* iOS стабилизация */
+  -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
 }
