@@ -115,7 +115,7 @@
 .map.in-view #country-tur { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 .map.in-view #country-taj { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 
-.map.in-view #truck1 {
+/* .map.in-view #truck1 {
   --dx: -1010px;
   --dy: -190px;
   animation: truckMove 4s ease-in-out 12s infinite;
@@ -125,7 +125,7 @@
   --dx: -450px;
   --dy: -250px;
   animation: truckMove 3s ease-in-out 14s infinite;
-}
+} */
 
 
 @keyframes mapZoomOut {
@@ -183,14 +183,14 @@
   }
 } */
 
-@keyframes truckMove {
+/* @keyframes truckMove {
   0%   { transform: translate3d(0, 0, 0) scale(0.5); opacity: 0; }
   10%  { transform: translate3d(0, 0, 0) scale(1.1); opacity: 1; }
   20%  { transform: translate3d(0, 0, 0) scale(1.0); opacity: 1; }
   80%  { transform: translate3d(var(--dx), var(--dy), 0) scale(1); opacity: 1; }
   90%  { transform: translate3d(var(--dx), var(--dy), 0) scale(0.5); opacity: 0; }
   100% { transform: translate3d(var(--dx), var(--dy), 0) scale(0.5); opacity: 0; }
-}
+} */
 
 @keyframes toRed {
   from {

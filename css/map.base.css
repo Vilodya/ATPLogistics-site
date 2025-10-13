@@ -90,7 +90,7 @@
   fill: #efefef;
 }
 
-#truck1,
+/* #truck1,
 #truck2 {
   opacity: 0;
   transform-box: fill-box;
@@ -98,4 +98,4 @@
   will-change: transform, opacity;
   -webkit-backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
-}
+} */
