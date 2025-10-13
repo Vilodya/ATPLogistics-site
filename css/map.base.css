@@ -89,13 +89,3 @@
   opacity: 1;
   fill: #efefef;
 }
-
-/* #truck1,
-#truck2 {
-  opacity: 0;
-  transform-box: fill-box;
-  transform-origin: center;
-  will-change: transform, opacity;
-  -webkit-backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-} */
