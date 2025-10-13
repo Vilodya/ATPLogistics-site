@@ -115,18 +115,16 @@
 .map.in-view #country-tur { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 .map.in-view #country-taj { animation: toGreen .6s ease-out forwards; animation-delay: 11s; }
 
-.map.in-view #truck1-wrap {
-  --dx: -1030px;
+.map.in-view #truck1 {
+  --dx: -1010px;
   --dy: -190px;
-  will-change: transform, opacity;
   animation: truckMove 4s ease-in-out 12s infinite;
 }
 
-.map.in-view #truck2-wrap {
+.map.in-view #truck2 {
   --dx: -450px;
   --dy: -250px;
-  will-change: transform, opacity;
-  animation: truckMove 2s ease-in-out 14s infinite;
+  animation: truckMove 3s ease-in-out 14s infinite;
 }
 
 
