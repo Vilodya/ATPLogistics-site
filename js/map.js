@@ -23,7 +23,7 @@ gsap.registerPlugin(MotionPathPlugin);
     target,            // '#truck1'
     path,              // '#route-...'
     moveDuration = 2,  // << индивидуальная длительность езды
-    delayStartSec = 7,
+    delayStartSec = 10,
     repeatDelaySec = 2,
     autoRotate = 180,  // 180 если иконка смотрит влево; true — если вправо
     inDur = 0.2,
@@ -68,7 +68,7 @@ gsap.registerPlugin(MotionPathPlugin);
     target: "#truck1",
     path: "#route-tacheng-belarus",
     moveDuration: 4,
-    delayStartSec: 7,
+    delayStartSec: 10,
     repeatDelaySec: 2,
     autoRotate: 180
   });
@@ -77,7 +77,7 @@ gsap.registerPlugin(MotionPathPlugin);
     target: "#truck2",
     path: "#route-dulati-russia",
     moveDuration: 2,
-    delayStartSec: 9,
+    delayStartSec: 12,
     repeatDelaySec: 2,
     autoRotate: 180
   });
@@ -86,7 +86,7 @@ gsap.registerPlugin(MotionPathPlugin);
     target: "#truck3",
     path: "#route-uz-tajikistan",
     moveDuration: 1,
-    delayStartSec: 11,
+    delayStartSec: 14,
     repeatDelaySec: 2,
     autoRotate: true
   });
