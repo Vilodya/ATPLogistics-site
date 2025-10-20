@@ -18,62 +18,31 @@
 }
 
 /* Стили подписей */
-#label-zimunai,
-#label-tacheng,
-#label-alashankou,
-#label-ili,
-#label-dulati,
-#label-maykapchagay,
-#label-bahty,
-#label-dostyk,
-#label-nur-joly,
-#label-kalgat,
-#label-kg,
-#label-uz,
-#label-ru,
-#label-br,
-#label-az,
-#label-eu,
-#label-tur,
-#label-taj {
+.punkt-cn,
+.punkt-kz,
+.label-country {
   opacity: 0;
   transform-origin: center;
   transform-box: fill-box;
 }
 
 /* Стили пинов */
-#start-map-zimurai,
-#start-map-tacheng,
-#start-map-alashankou,
-#start-map-ili,
-#start-map-dulati,
-#end-map-br,
-#end-map-ru-1,
-#end-map-ru-2,
-#end-map-kaspi,
-#end-map-uz,
-#end-map-kg,
-#end-map-az,
-#end-map-tur,
-#end-map-taj {
+.start-map {
   opacity: 0;
-  transform: scale(0.5) translateY(10px);
+  transform: scale(0.3) translateY(-10px);
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+.end-map {
+  opacity: 0;
+  transform: scale(0.3) translateY(30px);
   transform-origin: center;
   transform-box: fill-box;
 }
 
 /* Стили дорог */
-#route-ili-kyrgyzstan,
-#route-alashankou-uz,
-#route-zimunai-kaspi,
-#route-dulati-russia,
-#route-zimunai-russia,
-#route-tacheng-belarus,
-#route-kaspi-baku,
-#route-belarus-eu-1,
-#route-belarus-eu-2,
-#route-uz-turkmenistan,
-#route-uz-tajikistan {
+.route {
   opacity: 0;
   transform-origin: center;
   transform-box: fill-box;
