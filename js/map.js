@@ -18,109 +18,64 @@ document.addEventListener('DOMContentLoaded', () => {
 
 gsap.registerPlugin(MotionPathPlugin);
 
-  // Фабрика таймлайна для одного грузовика
-  function makeTruckTimeline({
-    target,            // '#truck1'
-    path,              // '#route-...'
-    moveDuration = 2,  // << индивидуальная длительность езды
-    delayStartSec = 10,
-    repeatDelaySec = 2,
-    autoRotate = 180,  // 180 если иконка смотрит влево; true — если вправо
-    inDur = 0.2,
-    settleDur = 0.2,
-    outDur = 0.2
-  }) {
-    // убьём старые твины/атрибуты, чтобы не тянули синхронно
-    gsap.killTweensOf(target);
-    gsap.set(target, {
-      x: 0, y: 0, rotation: 0, scale: 1,
-      transformOrigin: "50% 50%",
-      attr: { transform: null }
-    });
+// 1) Общие настройки старта/повтора
+const SHARED_START_DELAY = "13";  // сделай 0, если нужно стартовать сразу
+const REPEAT_DELAY = 2;
 
-    const tl = gsap.timeline({
-      paused: true,
-      repeat: -1,
-      repeatDelay: repeatDelaySec,
-      defaults: { ease: "power1.inOut" }
-    })
-    .set(target, { opacity: 0, scale: 0.5, transformOrigin: "50% 50%" })
+// 2) Фабрика одного бесконечного зацикленного таймлайна
+function makeTruck({ target, path, move = 2, autoRotate = 180, inDur = 0.2, settle = 0.2, outDur = 0.2 }) {
+  // начальные состояния
+  gsap.set(target, { x: 0, y: 0, rotation: 0, scale: 1, opacity: 0, transformOrigin: "50% 50%" });
+
+  const tl = gsap.timeline({
+    paused: true,
+    repeat: -1,
+    repeatDelay: REPEAT_DELAY,
+    defaults: { ease: "power1.inOut" }
+  });
+
+  return tl
     .to(target, { opacity: 1, scale: 1.1, duration: inDur })
-    .to(target, { scale: 1, duration: settleDur })
+    .to(target, { scale: 1, duration: settle })
     .to(target, {
-      duration: moveDuration,
+      duration: move,
       motionPath: {
         path,
         align: path,
         alignOrigin: [0.5, 0.5],
-        autoRotate: autoRotate
+        autoRotate // 180 если иконка смотрит влево; true — если вправо
       }
     }, "<")
     .to(target, { opacity: 0, scale: 0.5, duration: outDur }, ">");
+}
 
-    return {
-      playWithDelay() { gsap.delayedCall(delayStartSec, () => tl.play(0)); }
-    };
+// 3) Создаём таймлайны
+const timelines = [
+  makeTruck({ target: "#truck1", path: "#route-tacheng-belarus", move: 4, autoRotate: 180 }),
+  makeTruck({ target: "#truck2", path: "#route-dulati-russia",   move: 2, autoRotate: 180 }),
+  makeTruck({ target: "#truck3", path: "#route-uz-tajikistan",   move: 1, autoRotate: true }),
+];
+
+// 4) Стартуем все РАЗОМ, когда .map получает .in-view
+(function startOnInView() {
+  const mapEl = document.querySelector(".map");
+  if (!mapEl) return;
+
+  const playAll = () => timelines.forEach(tl => tl.play(0));
+  const playAllWithDelay = () => gsap.delayedCall(SHARED_START_DELAY, playAll);
+
+  // A) если класс уже есть
+  if (mapEl.classList.contains("in-view")) {
+    playAllWithDelay();
+    return;
   }
 
-  // 3) Создаём таймлайны для нужных грузовиков (пока не запускаем)
-  const truck1 = makeTruckTimeline({
-    target: "#truck1",
-    path: "#route-tacheng-belarus",
-    moveDuration: 4,
-    delayStartSec: 10,
-    repeatDelaySec: 2,
-    autoRotate: 180
-  });
-
-  const truck2 = makeTruckTimeline({
-    target: "#truck2",
-    path: "#route-dulati-russia",
-    moveDuration: 2,
-    delayStartSec: 12,
-    repeatDelaySec: 2,
-    autoRotate: 180
-  });
-
-  const truck3 = makeTruckTimeline({
-    target: "#truck3",
-    path: "#route-uz-tajikistan",
-    moveDuration: 1,
-    delayStartSec: 14,
-    repeatDelaySec: 2,
-    autoRotate: true
-  });
-
-  // 4) Старт по появлению .in-view у .map (через отлов изменения class)
-  (function startOnInView() {
-    const mapEl = document.querySelector(".map");
-    if (!mapEl) return;
-
-    let started = false;
-    const startAll = () => {
-      if (started) return;
-      started = true;
-      // запуск всех подготовленных таймлайнов с их персональными задержками
-      truck1.playWithDelay();
-      truck2.playWithDelay();
-      truck3.playWithDelay();
-    };
-
-    // A) если класс уже есть к моменту загрузки
+  // B) ждём появления класса
+  const mo = new MutationObserver(() => {
     if (mapEl.classList.contains("in-view")) {
-      startAll();
-      return;
+      playAllWithDelay();
+      mo.disconnect();
     }
-
-    // B) ждём появления класса .in-view
-    const mo = new MutationObserver((mutations) => {
-      for (const m of mutations) {
-        if (m.type === "attributes" && mapEl.classList.contains("in-view")) {
-          startAll();
-          mo.disconnect();
-          break;
-        }
-      }
-    });
-    mo.observe(mapEl, { attributes: true, attributeFilter: ["class"] });
-  })();
+  });
+  mo.observe(mapEl, { attributes: true, attributeFilter: ["class"] });
+})();

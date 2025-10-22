@@ -21,9 +21,9 @@
 .map.in-view #label-ru { animation-delay: 8s; }
 .map.in-view #label-br { animation-delay: 9s; }
 .map.in-view #label-az { animation-delay: 10s; }
-.map.in-view #label-eu { animation-delay: 11.5s; }
-.map.in-view #label-tur { animation-delay: 13s; }
-.map.in-view #label-taj { animation-delay: 14s; }
+.map.in-view #label-eu { animation-delay: 13.5s; }
+.map.in-view #label-tur { animation-delay: 11s; }
+.map.in-view #label-taj { animation-delay: 12s; }
 
 /* Pins */
 .map.in-view .start-map {
@@ -47,8 +47,8 @@
 .map.in-view #end-map-uz { animation-delay: 7s; }
 .map.in-view #end-map-kg { animation-delay: 6s; }
 .map.in-view #end-map-az { animation-delay: 10s; }
-.map.in-view #end-map-tur { animation-delay: 13s; }
-.map.in-view #end-map-taj { animation-delay: 14s; }
+.map.in-view #end-map-tur { animation-delay: 11s; }
+.map.in-view #end-map-taj { animation-delay: 12s; }
 
 /* Routes */
 .map.in-view .route {
@@ -63,10 +63,10 @@
 .map.in-view #route-zimunai-russia { animation-delay: 8s; }
 .map.in-view #route-tacheng-belarus { animation-delay: 9s; }
 .map.in-view #route-kaspi-baku { animation-delay: 10s; }
-.map.in-view #route-belarus-eu-1 { animation-delay: 11s; }
-.map.in-view #route-belarus-eu-2 { animation-delay: 12s; }
-.map.in-view #route-uz-turkmenistan { animation-delay: 13s; }
-.map.in-view #route-uz-tajikistan { animation-delay: 14s; }
+.map.in-view #route-belarus-eu-1 { animation-delay: 13s; }
+.map.in-view #route-belarus-eu-2 { animation-delay: 14s; }
+.map.in-view #route-uz-turkmenistan { animation-delay: 11s; }
+.map.in-view #route-uz-tajikistan { animation-delay: 12s; }
 
 
 /* Countries */
