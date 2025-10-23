@@ -4,6 +4,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 30% 1fr;
+    transition: grid-template-columns 0.8s ease;
   }
   .map-description {
   z-index: 2;
