@@ -1,302 +1,574 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
 
-  <title>ATP Logistics</title>
-  <meta name="description" content="ATP Logistics">
+    <title>ATP Logistics</title>
+    <meta name="description" content="ATP Logistics" />
 
-  <link rel="shortcut icon" href="./favicon/favicon.ico" type="image/x-icon">
-  <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+    <link
+      rel="shortcut icon"
+      href="./favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicon/apple-touch-icon.png"
+    />
 
-  <meta property="og:title" content="ATP Logistics">
-  <meta property="og:description" content="ATP Logistics">
-  <meta property="og:image" content="">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://localhost/">
+    <meta property="og:title" content="ATP Logistics" />
+    <meta property="og:description" content="ATP Logistics" />
+    <meta property="og:image" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://localhost/" />
 
-  <link rel="preload" as="image" href="./assets/images/bg.png">
+    <link rel="preload" as="image" href="./assets/images/bg.png" />
 
-  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./assets/fonts/fonts.css">
-  <link rel="stylesheet" href="./css/global.css">
-  <link rel="stylesheet" href="./css/variables.css">
-  <link rel="stylesheet" href="./css/animations.css">
-  <link rel="stylesheet" href="./css/style.css">
-
-</head>
-<body class="page home">
-  <!-- header -->
-  <header class="header" >
-    <div class="main-header__container" id="header">
-      <div class="header__logos">
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/fonts/fonts.css" />
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/variables.css" />
+    <link rel="stylesheet" href="./css/animations.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body class="page home">
+    <!-- header -->
+    <header class="header">
+      <div class="main-header__container" id="header">
+        <div class="header__logos">
           <a href="https://atpgroup.kz/" target="_blank">
-            <img class="header__logo" src="./assets/images/logo-atp-group.png" alt="ATP Group">
+            <img
+              class="header__logo"
+              src="./assets/images/logo-atp-group.png"
+              alt="ATP Group"
+            />
           </a>
-      </div>
+        </div>
 
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item"><a href="./index.html" class="nav__link">Главная</a></li>
-          <li class="nav__item"><a href="./pages/news.html" class="nav__link">Новости</a></li>
-          <li class="nav__item"><a href="./pages/delivery.html" class="nav__link">Услуги</a></li>
-          <li class="nav__item"><a href="#contacts" class="nav__link">Контакты</a></li>
-        </ul>
-      </nav>
-
-      <div class="header__controls">
-        <div class="lang-switcher">
-          <img src="./assets/svg/globe.svg" alt="Язык" class="icon" id="icon-globe">
-          <span>RU</span>
-          <img src="./assets/svg/chevron-down.svg" alt="Открыть" class="icon icon--small" id="icon-chevron">
-        </div>
-        <a href="tel:+77717094514" class="phone-icon">
-          <img src="./assets/svg/phone.svg" alt="Позвонить" class="icon" id="icon-phone">
-        </a>
-         <button type="button" class="toggle">
-          <img src="./assets/svg/burger.svg" alt="burger-menu" class="nav__burger icon" id="icon-burger">
-        </button>
-      </div>
-    </div>
-  </header>
-  <!-- Мобильное меню -->
-  <div class="mobile-menu">
-    <button type="button" class="mobile-menu__close" aria-label="Закрыть меню">×</button>
-    <ul class="mobile-menu__list">
-      <li><a href="./index.html">Главная</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="./pages/delivery.html">Услуги</a></li>
-      <li><a href="#contacts">Контакты</a></li>
-    </ul>
-  </div>
-  <!-- Main background -->
-  <section class="background">
-  </section>
-  <!-- Main hero -->
-  <section class="section section--accent main-hero">
-    <div class="container main-hero__container">
-      <div class="main-hero__content">
-        <h1 class="main-hero__title">Adal. Tiimdi. Paydali.</h1>
-      </div>
-    </div>
-    <a class="arrow-link" href="#service">
-      <div class="arrow">
-        <svg role="presentation" class="arrow-svg" style="fill:#ffffff;" x="0px" y="0px" width="38.417px" height="18.592px" viewBox="0 0 38.417 18.592"><g><path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path></g></svg>
-      </div>
-    </a>
-  </section>
-  <!-- About -->
-  <section class="section about" id="service">
-    <div class="container about__container">
-      <div class="about__content">
-        <h2 class="hero__title">ATP&nbsp;Logistics является одним из&nbsp;лидеров транспортно-логистической отрасли на&nbsp;рынке Казахстана.</h2>
-        <p class="hero__text">входит в группу компаний<br><strong>ATP Group Kazakhstan</strong></p>
-        <a href="https://atpgroup.kz/" target="_blank" class="btn btn--primary hero__btn">Подробнее</a>
-      </div>
-    </div>
-  </section>
-  <!-- Service -->
-  <section class="section service">
-    <div class="container service__container">
-      <h2 class="section__title service__title">ATP Logistics предоставляет комплексную услугу по&nbsp;доставке грузов.</h2>
-      <div class="grid">
-        <div class="grid__card animate-on-scroll fade-in">
-          <div class="grid__card-content">
-            <div class="grid__card-icon">
-              <img class="grid__card-image" src="./assets/svg/truck-line.svg" alt="Грузовой транспорт">
-            </div>
-            <div class="grid__card-text">Погрузка груза на&nbsp;стороне продавца</div>
-          </div>
-          <a href="./pages/delivery.html#loading" class="btn btn--primary grid__card-btn">Подробнее</a>
-        </div>
-        <div class="grid__card animate-on-scroll fade-in">
-          <div class="grid__card-content">
-            <div class="grid__card-icon">
-              <img class="grid__card-image" src="./assets/svg/Stamp.svg" alt="Таможенные услуги">
-            </div>
-            <div class="grid__card-text">Обеспечение прохождения таможенной границы</div>
-          </div>
-          <a href="./pages/delivery.html#customs-clearance" class="btn btn--primary grid__card-btn">Подробнее</a>
-        </div>
-        <div class="grid__card animate-on-scroll fade-in">
-          <div class="grid__card-content">
-            <div class="grid__card-icon">
-              <img class="grid__card-image" src="./assets/svg/map-pin-2-line.svg" alt="Доставка">
-            </div>
-            <div class="grid__card-text">Доставка груза до покупателя</div>
-          </div>
-          <a href="./pages/delivery.html#delivery" class="btn btn--primary grid__card-btn">Подробнее</a>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="section divider">
-    <div class="divider__container">
-      <div class="divider"></div>
-    </div>
-  </section>
-  <!-- Our Benefits -->
-  <section class="section our-benefits">
-    <div class="container our-benefits__container">
-      <h2 class="section__title our-benefits__title">Наши преимущества</h2>
-      <div class="card-grid card-grid--6">
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/bus-2-line.svg" alt="Грузовой транспорт">
-          </div>
-          <div class="benefit-card__title">Собственный парк грузового транспорта</div>
-        </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/draft-line.svg" alt="Таможенные услуги">
-          </div>
-          <div class="benefit-card__title">Услуги по таможенному оформлению без посредников</div>
-        </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/wallet.svg" alt="Оплата">
-          </div>
-          <div class="benefit-card__title">Удобные способы оплаты: наличный и&nbsp;безналичный расчет</div>
-        </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/coins-line.svg" alt="Тарифы">
-          </div>
-          <div class="benefit-card__title">Умеренные тарифы</div>
-        </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/like.svg" alt="Клиенты">
-          </div>
-          <div class="benefit-card__title">Индивидуальный подход к&nbsp;каждому клиенту</div>
-        </div>
-        <div class="benefit-card animate-on-scroll fade-in">
-          <div class="benefit-card__icon">
-            <img class="benefit-card__image" src="./assets/svg/map-2-line.svg" alt="Доставка">
-          </div>
-          <div class="benefit-card__title">Поиск оптимальных путей доставки</div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Key Partner -->
-  <section class="section keypartner">
-    <div class="container keypartner__container">
-      <h2 class="section__title keypartner__title">Ключевым партнером ATP Logistics является компания EuroTransit, которая имеет всю инфраструктуру на&nbsp;границе Казахстана с&nbsp;КНР:</h2>
-      <ul class="keypartner__list">
-        <li class="keypartner__list-item">Приграничный контейнерный терминал на ст.&nbsp;Алтынколь.</li>
-        <li class="keypartner__list-item">Приграничный контейнерынй терминал «Dostyk».</li>
-        <li class="keypartner__list-item">Транспортно-логистический центр «Калжат».</li>
-        <li class="keypartner__list-item">Транспортно-логистический центр «Бахты».</li>
-        <li class="keypartner__list-item">Транспортно-логистический центр «Майкапшагай».</li>
-        <li class="keypartner__list-item">Транспортно-логистический центр класса «А» в&nbsp;г.&nbsp;Алматы.</li>
-        <li class="keypartner__list-item">Коммунально-складские помещения в&nbsp;г.&nbsp;Астана и&nbsp;г.&nbsp;Шымкент.</li>
-    </ul>
-    <a href="https://eurotransit.kz/" target="_blank" class="btn btn--primary keypartner__btn">Подробнее</a>
-    </div>
-  </section>
-  <!--Partners -->
-  <section class="section partners">
-    <div class="container partners__container">
-      <h2 class="section__title partners__title">Нам доверяют</h2>
-      <div class="partners__slider-wrapper swiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="./assets/images/Astana-Motors-Logo.jpg" alt="Astana Motors" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/byd-1.svg" alt="BYD" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/PHOTO-2024-07-09-19-.jpg" alt="Partner" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/45103dc4e52445227440.png" alt="Partner" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/ATP-Tech.png" alt="ATP TECH" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/lexus.svg" alt="Lexus" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/zeekr.png" alt="Zeekr" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/Kazpost_Logosvg.png" alt="KazPost" class="partners__image">
-          </div>
-          <div class="swiper-slide">
-            <img src="./assets/images/qaztrade.png" alt="QazTrade" class="partners__image">
-          </div>
-        </div>
-        <!-- Только стрелки -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer__container">
-      <div class="footer__top">
-        <div class="footer__logos">
-          <a href="./index.html">
-            <img class="footer__logo" src="./assets/images/logo-atp.png" alt="ATP Logistics">
-          </a>
-          <a href="https://atpgroup.kz/" target="_blank">
-            <img class="footer__logo" src="./assets/images/logo-atp-group.png" alt="ATP Group">
-          </a>
-        </div>
-        <nav class="footer__nav">
-          <h4 class="footer__title">Главная</h4>
-          <ul class="footer__list">
-            <li class="footer__list-item"><a href="#">О компании</a></li>
-            <li class="footer__list-item"><a href="./pages/operator.html">Об Уполномоченном экономическом операторе</a></li>
-            <li class="footer__list-item"><a href="./pages/news.html">Новости</a></li>
-            <li class="footer__list-item"><a href="./pages/delivery.html">Услуги</a></li>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Главная</a>
+            </li>
+            <li class="nav__item">
+              <a href="./pages/news.html" class="nav__link">Новости</a>
+            </li>
+            <li class="nav__item">
+              <a href="./pages/delivery.html" class="nav__link">Услуги</a>
+            </li>
+            <li class="nav__item">
+              <a href="#contacts" class="nav__link">Контакты</a>
+            </li>
           </ul>
         </nav>
-        <div class="footer__contacts" id="contacts">
-          <h4 class="footer__title">Контакты</h4>
-          <ul class="footer__list">
-            <li class="footer__list-item"><img src="./assets/svg/phone-black.svg" alt="Phone"><a href="tel:+77717094514">+7 771 709 45 14</a></li>
-            <li class="footer__list-item"><img src="./assets/svg/mail-open-sharp.svg" alt="Email"><a href="mailto:info@atp-logistics.kz">info@atp-logistics.kz</a></li>
-            <li class="footer__list-item">Богенбай батыра 23/3,<br>г. Алматы, Казахстан</li>
-          </ul>
-        </div>
-        <div class="footer__social">
-          <h4 class="footer__title">Социальные сети</h4>
-          <ul class="footer__social-list">
-            <li class="footer__list-item"><a href="https://www.instagram.com/atp.logistics/#"><img src="./assets/svg/instagram.svg" alt="Instagram"></a></li>
-            <li class="footer__list-item"><a href="https://wa.me/77717094514"><img src="./assets/svg/whatsapp.svg" alt="WhatsApp"></a></li>
-            <li class="footer__list-item"><a href="https://t.me/+77717094514"><img src="./assets/svg/telegram.svg" alt="Telegram"></a></li>
-            <li class="footer__list-item"><a href="https://www.wechat.com/ru/77717094514"><img src="./assets/svg/wechat.svg" alt="WeChat"></a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom section--accent">
-        <div class="footer__wrapper">
-          <div class="footer__copyright">
-            © 2025 atp-logistics.kz Все права защищены.
-          </div>
-          <a href="#" class="footer__policy">Политика конфиденциальности</a>
-          <div class="lang-switcher footer__lang-switcher">
-            <img src="./assets/svg/globe.svg" alt="Язык" class="icon">
-            <span>RU</span>
-            <img src="./assets/svg/chevron-down.svg" alt="Открыть" class="icon icon--small">
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
 
-  <script src="./js/swiper-bundle.min.js"></script>
-  <script src="./js/main.js" defer></script>
-  <script src="./js/sliders.js" defer></script>
-    <script src="./js/animations.js" defer></script> 
-</body>
+        <div class="header__controls">
+          <div class="lang-switcher">
+            <img
+              src="./assets/svg/globe.svg"
+              alt="Язык"
+              class="icon"
+              id="icon-globe"
+            />
+            <span>RU</span>
+            <img
+              src="./assets/svg/chevron-down.svg"
+              alt="Открыть"
+              class="icon icon--small"
+              id="icon-chevron"
+            />
+          </div>
+          <a href="tel:+77717094514" class="phone-icon">
+            <img
+              src="./assets/svg/phone.svg"
+              alt="Позвонить"
+              class="icon"
+              id="icon-phone"
+            />
+          </a>
+          <button type="button" class="toggle">
+            <img
+              src="./assets/svg/burger.svg"
+              alt="burger-menu"
+              class="nav__burger icon"
+              id="icon-burger"
+            />
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- Мобильное меню -->
+    <div class="mobile-menu">
+      <button
+        type="button"
+        class="mobile-menu__close"
+        aria-label="Закрыть меню"
+      >
+        ×
+      </button>
+      <ul class="mobile-menu__list">
+        <li><a href="./index.html">Главная</a></li>
+        <li><a href="#">Новости</a></li>
+        <li><a href="./pages/delivery.html">Услуги</a></li>
+        <li><a href="#contacts">Контакты</a></li>
+      </ul>
+    </div>
+    <!-- Main background -->
+    <section class="background"></section>
+    <!-- Main hero -->
+    <section class="section section--accent main-hero">
+      <div class="container main-hero__container">
+        <div class="main-hero__content">
+          <h1 class="main-hero__title">Adal. Tiimdi. Paydali.</h1>
+        </div>
+      </div>
+      <a class="arrow-link" href="#service">
+        <div class="arrow">
+          <svg
+            role="presentation"
+            class="arrow-svg"
+            style="fill: #ffffff"
+            x="0px"
+            y="0px"
+            width="38.417px"
+            height="18.592px"
+            viewBox="0 0 38.417 18.592"
+          >
+            <g>
+              <path
+                d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"
+              ></path>
+            </g>
+          </svg>
+        </div>
+      </a>
+    </section>
+    <!-- About -->
+    <section class="section about" id="service">
+      <div class="container about__container">
+        <div class="about__content">
+          <h2 class="hero__title">
+            ATP&nbsp;Logistics является одним из&nbsp;лидеров
+            транспортно-логистической отрасли на&nbsp;рынке Казахстана.
+          </h2>
+          <p class="hero__text">
+            входит в группу компаний<br /><strong>ATP Group Kazakhstan</strong>
+          </p>
+          <a
+            href="https://atpgroup.kz/"
+            target="_blank"
+            class="btn btn--primary hero__btn"
+            >Подробнее</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Video -->
+    <section class="section video" id="video">
+        <div class="video__content">
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            controls
+            /* poster="/videos/main-poster.webp" */
+            style="display: block; width: 100%; height: auto"
+          >
+            <source src="./assets/videos/main-ru-edited-2.mp4" type="video/mp4" />
+          </video>
+        </div>
+    </section>
+    <!-- Service -->
+    <section class="section service">
+      <div class="container service__container">
+        <h2 class="section__title service__title">
+          ATP Logistics предоставляет комплексную услугу по&nbsp;доставке
+          грузов.
+        </h2>
+        <div class="grid">
+          <div class="grid__card animate-on-scroll fade-in">
+            <div class="grid__card-content">
+              <div class="grid__card-icon">
+                <img
+                  class="grid__card-image"
+                  src="./assets/svg/truck-line.svg"
+                  alt="Грузовой транспорт"
+                />
+              </div>
+              <div class="grid__card-header">
+                Погрузка груза на&nbsp;стороне продавца
+              </div>
+              <div class="grid__card-text">
+                Обеспечение прохождения таможенной границы
+              </div>
+            </div>
+            <a
+              href="./pages/delivery.html#loading"
+              class="btn btn--primary grid__card-btn"
+              >Подробнее</a
+            >
+          </div>
+          <div class="grid__card animate-on-scroll fade-in">
+            <div class="grid__card-content">
+              <div class="grid__card-icon">
+                <img
+                  class="grid__card-image"
+                  src="./assets/svg/Stamp.svg"
+                  alt="Таможенные услуги"
+                />
+              </div>
+              <div class="grid__card-header">
+                Обеспечение прохождения таможенной границы
+              </div>
+              <div class="grid__card-text">
+                Обеспечение прохождения таможенной границы
+              </div>
+            </div>
+            <a
+              href="./pages/delivery.html#customs-clearance"
+              class="btn btn--primary grid__card-btn"
+              >Подробнее</a
+            >
+          </div>
+          <div class="grid__card animate-on-scroll fade-in">
+            <div class="grid__card-content">
+              <div class="grid__card-icon">
+                <img
+                  class="grid__card-image"
+                  src="./assets/svg/map-pin-2-line.svg"
+                  alt="Доставка"
+                />
+              </div>
+              <div class="grid__card-header">Доставка груза до покупателя</div>
+              <div class="grid__card-text">
+                Обеспечение прохождения таможенной границы
+              </div>
+            </div>
+            <a
+              href="./pages/delivery.html#delivery"
+              class="btn btn--primary grid__card-btn"
+              >Подробнее</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section divider">
+      <div class="divider__container">
+        <div class="divider"></div>
+      </div>
+    </section>
+    <!-- Our Benefits -->
+    <section class="section our-benefits">
+      <div class="container our-benefits__container">
+        <h2 class="section__title our-benefits__title">Наши преимущества</h2>
+        <div class="card-grid card-grid--6">
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/bus-2-line.svg"
+                alt="Грузовой транспорт"
+              />
+            </div>
+            <div class="benefit-card__title">
+              Собственный парк грузового транспорта
+            </div>
+          </div>
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/draft-line.svg"
+                alt="Таможенные услуги"
+              />
+            </div>
+            <div class="benefit-card__title">
+              Услуги по таможенному оформлению без посредников
+            </div>
+          </div>
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/wallet.svg"
+                alt="Оплата"
+              />
+            </div>
+            <div class="benefit-card__title">
+              Удобные способы оплаты: наличный и&nbsp;безналичный расчет
+            </div>
+          </div>
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/coins-line.svg"
+                alt="Тарифы"
+              />
+            </div>
+            <div class="benefit-card__title">Умеренные тарифы</div>
+          </div>
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/like.svg"
+                alt="Клиенты"
+              />
+            </div>
+            <div class="benefit-card__title">
+              Индивидуальный подход к&nbsp;каждому клиенту
+            </div>
+          </div>
+          <div class="benefit-card animate-on-scroll fade-in">
+            <div class="benefit-card__icon">
+              <img
+                class="benefit-card__image"
+                src="./assets/svg/map-2-line.svg"
+                alt="Доставка"
+              />
+            </div>
+            <div class="benefit-card__title">
+              Поиск оптимальных путей доставки
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Key Partner -->
+    <section class="section keypartner">
+      <div class="container keypartner__container">
+        <h2 class="section__title keypartner__title">
+          Ключевым партнером ATP Logistics является компания EuroTransit,
+          которая имеет всю инфраструктуру на&nbsp;границе Казахстана
+          с&nbsp;КНР:
+        </h2>
+        <ul class="keypartner__list">
+          <li class="keypartner__list-item">
+            Приграничный контейнерный терминал на ст.&nbsp;Алтынколь.
+          </li>
+          <li class="keypartner__list-item">
+            Приграничный контейнерынй терминал «Dostyk».
+          </li>
+          <li class="keypartner__list-item">
+            Транспортно-логистический центр «Калжат».
+          </li>
+          <li class="keypartner__list-item">
+            Транспортно-логистический центр «Бахты».
+          </li>
+          <li class="keypartner__list-item">
+            Транспортно-логистический центр «Майкапшагай».
+          </li>
+          <li class="keypartner__list-item">
+            Транспортно-логистический центр класса «А» в&nbsp;г.&nbsp;Алматы.
+          </li>
+          <li class="keypartner__list-item">
+            Коммунально-складские помещения в&nbsp;г.&nbsp;Астана
+            и&nbsp;г.&nbsp;Шымкент.
+          </li>
+        </ul>
+        <a
+          href="https://eurotransit.kz/"
+          target="_blank"
+          class="btn btn--primary keypartner__btn"
+          >Подробнее</a
+        >
+      </div>
+    </section>
+    <!--Partners -->
+    <section class="section partners">
+      <div class="container partners__container">
+        <h2 class="section__title partners__title">Нам доверяют</h2>
+        <div class="partners__slider-wrapper swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/Astana-Motors-Logo.jpg"
+                alt="Astana Motors"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/byd-1.svg"
+                alt="BYD"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/PHOTO-2024-07-09-19-.jpg"
+                alt="Partner"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/45103dc4e52445227440.png"
+                alt="Partner"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/ATP-Tech.png"
+                alt="ATP TECH"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/lexus.svg"
+                alt="Lexus"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/zeekr.png"
+                alt="Zeekr"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/Kazpost_Logosvg.png"
+                alt="KazPost"
+                class="partners__image"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                src="./assets/images/qaztrade.png"
+                alt="QazTrade"
+                class="partners__image"
+              />
+            </div>
+          </div>
+          <!-- Только стрелки -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__top">
+          <div class="footer__logos">
+            <a href="./index.html">
+              <img
+                class="footer__logo"
+                src="./assets/images/logo-atp.png"
+                alt="ATP Logistics"
+              />
+            </a>
+            <a href="https://atpgroup.kz/" target="_blank">
+              <img
+                class="footer__logo"
+                src="./assets/images/logo-atp-group.png"
+                alt="ATP Group"
+              />
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <h4 class="footer__title">Главная</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item"><a href="#">О компании</a></li>
+              <li class="footer__list-item">
+                <a href="./pages/operator.html"
+                  >Об Уполномоченном экономическом операторе</a
+                >
+              </li>
+              <li class="footer__list-item">
+                <a href="./pages/news.html">Новости</a>
+              </li>
+              <li class="footer__list-item">
+                <a href="./pages/delivery.html">Услуги</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__contacts" id="contacts">
+            <h4 class="footer__title">Контакты</h4>
+            <ul class="footer__list">
+              <li class="footer__list-item">
+                <img src="./assets/svg/phone-black.svg" alt="Phone" /><a
+                  href="tel:+77717094514"
+                  >+7 771 709 45 14</a
+                >
+              </li>
+              <li class="footer__list-item">
+                <img src="./assets/svg/mail-open-sharp.svg" alt="Email" /><a
+                  href="mailto:info@atp-logistics.kz"
+                  >info@atp-logistics.kz</a
+                >
+              </li>
+              <li class="footer__list-item">
+                Богенбай батыра 23/3,<br />г. Алматы, Казахстан
+              </li>
+            </ul>
+          </div>
+          <div class="footer__social">
+            <h4 class="footer__title">Социальные сети</h4>
+            <ul class="footer__social-list">
+              <li class="footer__list-item">
+                <a href="https://www.instagram.com/atp.logistics/#"
+                  ><img src="./assets/svg/instagram.svg" alt="Instagram"
+                /></a>
+              </li>
+              <li class="footer__list-item">
+                <a href="https://wa.me/77717094514"
+                  ><img src="./assets/svg/whatsapp.svg" alt="WhatsApp"
+                /></a>
+              </li>
+              <li class="footer__list-item">
+                <a href="https://t.me/+77717094514"
+                  ><img src="./assets/svg/telegram.svg" alt="Telegram"
+                /></a>
+              </li>
+              <li class="footer__list-item">
+                <a href="https://www.wechat.com/ru/77717094514"
+                  ><img src="./assets/svg/wechat.svg" alt="WeChat"
+                /></a>
+              </li>
+              <li class="footer__list-item">
+                <a href="#"
+                  ><img src="./assets/svg/linkedin.svg" alt="LinkedIn"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer__bottom section--accent">
+          <div class="footer__wrapper">
+            <div class="footer__copyright">
+              © 2025 atp-logistics.kz Все права защищены.
+            </div>
+            <a href="#" class="footer__policy">Политика конфиденциальности</a>
+            <div class="lang-switcher footer__lang-switcher">
+              <img src="./assets/svg/globe.svg" alt="Язык" class="icon" />
+              <span>RU</span>
+              <img
+                src="./assets/svg/chevron-down.svg"
+                alt="Открыть"
+                class="icon icon--small"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/swiper-bundle.min.js"></script>
+    <script src="./js/main.js" defer></script>
+    <script src="./js/sliders.js" defer></script>
+    <script src="./js/animations.js" defer></script>
+  </body>
 </html>

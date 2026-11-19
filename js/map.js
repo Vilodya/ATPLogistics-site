@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 gsap.registerPlugin(MotionPathPlugin);
 
 // 1) Общие настройки старта/повтора
-const SHARED_START_DELAY = "13";  // сделай 0, если нужно стартовать сразу
+const SHARED_START_DELAY = "8";  // сделай 0, если нужно стартовать сразу
 const REPEAT_DELAY = 2;
 
 // 2) Фабрика одного бесконечного зацикленного таймлайна

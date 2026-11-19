@@ -1,19 +1,37 @@
 @keyframes arrow-bounce {
-  0%   { transform: scale(.7) translateY(0); }
-  50%  { transform: scale(1) translateY(10px); }
-  100% { transform: scale(.7) translateY(0); }
+  0% {
+    transform: scale(0.7) translateY(0);
+  }
+  50% {
+    transform: scale(1) translateY(10px);
+  }
+  100% {
+    transform: scale(0.7) translateY(0);
+  }
 }
 
 @keyframes arrow-bounce-left {
-  0%   { transform: scale(.7) translateX(0); }
-  50%  { transform: scale(1) translateX(-10px); }
-  100% { transform: scale(.7) translateX(0); }
+  0% {
+    transform: scale(0.7) translateX(0);
+  }
+  50% {
+    transform: scale(1) translateX(-10px);
+  }
+  100% {
+    transform: scale(0.7) translateX(0);
+  }
 }
 
 @keyframes arrow-bounce-right {
-  0%   { transform: scale(.7) translateX(0); }
-  50%  { transform: scale(1) translateX(10px); }
-  100% { transform: scale(.7) translateX(0); }
+  0% {
+    transform: scale(0.7) translateX(0);
+  }
+  50% {
+    transform: scale(1) translateX(10px);
+  }
+  100% {
+    transform: scale(0.7) translateX(0);
+  }
 }
 
 .page {
@@ -128,7 +146,9 @@
   padding-inline: var(--container-padding-inline);
   color: var(--primary-color);
   background-color: transparent;
-  transition: background-color 0.3s, box-shadow 0.3s;
+  transition:
+    background-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .main-header__container.scrolled {
@@ -322,7 +342,7 @@
 } */
 
 .hero__container::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   z-index: 1;
@@ -377,11 +397,19 @@
   height: 60px;
 }
 
-.grid__card-text {
+.grid__card-header {
   margin-top: 12px;
   font-family: var(--accent-font);
   font-weight: 600;
   font-size: var(--font-text-medium);
+  line-height: 120%;
+}
+
+.grid__card-text {
+  margin-top: 12px;
+  font-family: var(--accent-font);
+  font-weight: 600;
+  font-size: var(--font-capture);
   line-height: 120%;
 }
 
@@ -396,7 +424,6 @@
   max-width: 1440px;
   margin: 0 auto;
   padding-inline: var(--container-padding-inline);
-
 }
 
 .divider {
@@ -444,6 +471,7 @@
   text-align: center;
 }
 
+.service,
 .keypartner {
   background-color: #efefef;
 }
@@ -496,8 +524,9 @@
 }
 
 .footer__top {
+  background-color: var(--primary-color);
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   align-content: center;
   gap: 32px;
   width: 100%;
@@ -642,11 +671,19 @@
     height: 60px;
   }
 
-  .grid__card-text {
+  .grid__card-header {
     margin-top: 12px;
     font-family: var(--accent-font);
     font-weight: 600;
     font-size: var(--font-text-medium);
+    line-height: 120%;
+  }
+
+  .grid__card-text {
+    margin-top: 12px;
+    font-family: var(--accent-font);
+    font-weight: 600;
+    font-size: var(--font-capture);
     line-height: 120%;
   }
 
@@ -665,7 +702,7 @@
 
   .keypartner__btn {
     margin-top: 32px;
-  } 
+  }
 
   .footer__top {
     display: grid;
@@ -714,13 +751,10 @@
   }
 
   .footer__top {
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .footer__logos {
     display: none;
   }
 }
-
-
-
